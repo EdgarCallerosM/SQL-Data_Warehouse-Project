@@ -140,7 +140,7 @@ CASE WHEN bdate > GETDATE() THEN NULL
 	ELSE bdate
 END AS bdate,
 CASE WHEN UPPER(TRIM(gen)) IN ('F','FEMALE') THEN 'Female'
-     WHEN UPPER(TRIM(gen)) IN ('F','MALE') THEN 'Male'
+     WHEN UPPER(TRIM(gen)) IN ('M','MALE') THEN 'Male'
 	 ELSE 'n/a'
 END AS gen
 FROM bronze.erp_cust_az12
@@ -153,7 +153,7 @@ INSERT INTO silver.erp_LOC_A101 (cid, cntry)
 SELECT
 REPLACE(cid,'-','') cid,
 CASE WHEN TRIM(cntry) = 'DE' THEN 'Germany'
-	 WHEN TRIM(cntry) IN ('US, USA') THEN 'United States'
+	 WHEN TRIM(cntry) IN ('US', 'USA') THEN 'United States'
 	 WHEN TRIM(cntry) = '' or cntry IS NULL THEN 'n/a'
 	 ELSE TRIM(cntry)
 END AS cntry
