@@ -53,11 +53,3 @@ The Gold layer contains business-ready views structured for analytical queries a
 | `quantity` | `INT` | Quantity of products sold |
 | `price` | `INT` | Unit price of the product |
 
-## Notes
-
-- **Dimension views:** `gold.dim_customers` and `gold.dim_products` provide descriptive attributes for customer and product analysis.
-- **Fact view:** `gold.fact_sales` provides quantitative sales measures and date fields for reporting and aggregation.
-- **Surrogate keys:** The customer and product keys are generated with `ROW_NUMBER()`. They are not declared as primary keys, and their values may change if the underlying data or ordering changes.
-- **Relationships:** The sales fact view joins to the dimensions using the product business key and customer ID, then exposes their generated surrogate keys.
-- **Current products:** The product dimension excludes historical product versions by retaining only records where `prd_end_dt IS NULL`.
-- **Left joins:** Unmatched customer, product, or ERP records can result in null values in the corresponding output columns.
