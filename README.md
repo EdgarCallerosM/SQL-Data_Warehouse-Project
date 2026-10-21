@@ -24,7 +24,3 @@ Finally, in the Gold layer, we do aggregations and Join tables to create tables 
 <img width="1504" height="900" alt="Data_Model" src="https://github.com/user-attachments/assets/5ed36e0e-63ac-4567-9fbc-4e4c7f3daca0" />
 
 
-| Header 1 | Header 2 | Header 3 |
-| -------- | -------- | -------- |
-| Row 1 A  | Row 1 B  | Row 1 C  |
-| Row 2 A  | Row 2 B  | Row 2 C  |
