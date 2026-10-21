@@ -1,5 +1,9 @@
-# Bronze Layer — Data Dictionary
-## 1. `bronze.crm_cust_info`
+# Bronze Layer 
+
+In the bronze layer, we extract the raw data from the sources without doing any cleaning or transformations. Here we recreate getting the raw data from two sources: a CRM source and an ERP source.
+
+## Data dictionary
+### 1. `bronze.crm_cust_info`
 
 | Column Name | Data Type | Description |
 |---|---|---|
@@ -11,7 +15,7 @@
 | `cst_gndr` | `NVARCHAR(50)` | Customer's gender |
 | `cst_create_date` | `DATE` | Date the customer record was created |
 
-## 2. `bronze.crm_prd_info`
+### 2. `bronze.crm_prd_info`
 
 | Column Name | Data Type | Description |
 |---|---|---|
@@ -23,7 +27,7 @@
 | `prd_start_dt` | `DATE` | Start date of the product record or version |
 | `prd_end_dt` | `DATE` | End date of the product record or version |
 
-## 3. `bronze.crm_sales_details`
+### 3. `bronze.crm_sales_details`
 
 | Column Name | Data Type | Description |
 |---|---|---|
@@ -37,7 +41,7 @@
 | `sls_quantity` | `INT` | Quantity of products sold |
 | `sls_price` | `INT` | Price per product or unit price |
 
-## 4. `bronze.erp_CUST_AZ12`
+### 4. `bronze.erp_CUST_AZ12`
 
 | Column Name | Data Type | Description |
 |---|---|---|
@@ -45,14 +49,14 @@
 | `BDATE` | `DATE` | Customer's birth date |
 | `GEN` | `VARCHAR(50)` | Customer's gender |
 
-## 5. `bronze.erp_LOC_A101`
+### 5. `bronze.erp_LOC_A101`
 
 | Column Name | Data Type | Description |
 |---|---|---|
 | `CID` | `VARCHAR(50)` | Customer identifier from the ERP system |
 | `CNTRY` | `VARCHAR(50)` | Customer's country |
 
-## 6. `bronze.erp_PX_CAT_G1V2`
+### 6. `bronze.erp_PX_CAT_G1V2`
 
 | Column Name | Data Type | Description |
 |---|---|---|
