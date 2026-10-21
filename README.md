@@ -18,7 +18,7 @@ Finally, in the Gold layer, we do aggregations and Join tables to create tables 
 
 ## Raw tables
 
-## Bronze Layer — Table Descriptions
+<img width="5048" height="2088" alt="Data_Flow" src="https://github.com/user-attachments/assets/3c0b217e-58b7-408e-b6d8-a412df09293e" />
 
 | Table Name | Description |
 |---|---|
