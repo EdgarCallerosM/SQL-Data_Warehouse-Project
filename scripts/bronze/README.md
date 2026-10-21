@@ -1,3 +1,4 @@
+# Bronze Layer — Data Dictionary
 ## 1. `bronze.crm_cust_info`
 
 | Column Name | Data Type | Description |
