@@ -1,8 +1,12 @@
-# Gold Layer — Data Dictionary
+# Gold Layer 
 
-The Gold layer contains business-ready views structured for analytical queries and reporting. It includes customer and product dimension views, along with a sales fact view.
+The Gold layer contains business-ready views structured for analytical queries and reporting. It includes customer and product dimension views, along with a sales fact view. The data-schema used is a star-schema.
 
-## 1. `gold.dim_customers`
+## 1. Data model
+
+<img width="3008" height="1800" alt="Data_Model" src="https://github.com/user-attachments/assets/66ab81c3-2593-4501-8062-d6694a58b2b2" />
+
+## 2. `gold.dim_customers`
 
 **Description:** Customer dimension view combining CRM customer information with ERP customer birth dates, gender, and country data.
 
@@ -19,7 +23,7 @@ The Gold layer contains business-ready views structured for analytical queries a
 | `birthdate` | `DATE` | Customer's birth date from the ERP customer table |
 | `create_date` | `DATE` | Date the customer record was created in the CRM source system |
 
-## 2. `gold.dim_products`
+## 3. `gold.dim_products`
 
 **Description:** Product dimension view combining current CRM product records with ERP category information. Historical product versions are excluded by filtering for records whose end date is null.
 
@@ -37,7 +41,7 @@ The Gold layer contains business-ready views structured for analytical queries a
 | `product_line` | `NVARCHAR(50)` | Standardized product line |
 | `start_date` | `DATE` | Date the current product version became valid |
 
-## 3. `gold.fact_sales`
+## 4. `gold.fact_sales`
 
 **Description:** Sales fact view containing order-level or order-line-level sales measures, dates, and references to the customer and product dimensions.
 
